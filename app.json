@@ -1,0 +1,50 @@
+{
+    "name": "ميوزك ماس",
+    "description": "سورس ماس مجاني لاخدا يخدعك .",
+    "logo": "https://telegra.ph/file/8dd5ef5b8ea6b2f4dbe97.jpg",
+    "keywords": [
+        "Telegram",
+        "MusicPlayer",
+        "VideoPlayer"
+    ],
+    "repository": "https://github.com/SSASFF/FYUUFFH",
+    "env": {
+        "SESSION": {
+            "description": "حط جلسة بايروجرام",
+            "required": true
+        },
+        "API_ID": {
+            "description": "ايبي ايدي   http://my.telegram.org/apps",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "عوفها لتلعب",
+            "required": false,
+            "value": "/"
+        },
+        "API_HASH": {
+            "description": "ايبي هاش  http://my.telegram.org/apps",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "خلي ايديك)",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
